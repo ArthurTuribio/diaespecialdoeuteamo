@@ -1,0 +1,60 @@
+*{
+  margin:50px;
+  padding:50px;
+  box-sizing:border-box;
+}
+
+body{
+  width:100vw;
+  height:100vh;
+  background:#050816;
+  overflow:hidden;
+
+  display:flex;
+  justify-content:center;
+  align-items:center;
+
+  font-family:Arial, sans-serif;
+}
+
+.container{
+  position:relative;
+  width:500px;
+  height:500px;
+}
+
+.container span{
+  position:absolute;
+
+  color:#ff9aa2;
+  font-size:14px;
+  font-weight:bold;
+
+  white-space:nowrap;
+
+  text-shadow:
+    0 0 5px #ff5c8a,
+    0 0 10px #ff5c8a,
+    0 0 20px #ff5c8a;
+
+  animation: pulse 2s infinite ease-in-out;
+}
+
+/* efeito brilhando */
+@keyframes pulse{
+
+  0%{
+    opacity:0.2;
+    transform:translate(-50%, -50%) scale(0.7);
+  }
+
+  50%{
+    opacity:1;
+    transform:translate(-50%, -50%) scale(1.1);
+  }
+
+  100%{
+    opacity:0.2;
+    transform:translate(-50%, -50%) scale(0.7);
+  }
+}

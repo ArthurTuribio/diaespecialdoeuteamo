@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vc é o amor da minha vida!</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="container" id="heart-container"></div>
+
+  <script>
+    const container = document.getElementById("heart-container");
+
+    // quantidade de textos
+    const total = 180;
+
+    for (let i = 0; i < total; i++) {
+
+      // fórmula do coração
+      const t = Math.PI * 2 * (i / total);
+
+      const x = 16 * Math.pow(Math.sin(t), 3);
+
+      const y =
+        13 * Math.cos(t) -
+        5 * Math.cos(2 * t) -
+        2 * Math.cos(3 * t) -
+        Math.cos(4 * t);
+
+      // cria texto
+      const span = document.createElement("span");
+      span.innerText = "eu te amo";
+
+      // posicionamento
+      const scale = 18;
+
+      span.style.left = `${x * scale}px`;
+      span.style.top = `${-y * scale}px`;
+
+      // atraso da animação
+      span.style.animationDelay = `${i * 0.03}s`;
+
+      container.appendChild(span);
+    }
+  </script>
+
+</body>
+</html>
+
